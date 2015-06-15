@@ -1,0 +1,42 @@
+<idea-plugin version="2">
+  <id>com.flefebv.rally.tasks.plugin</id>
+  <name>Rally IDEA</name>
+  <version>1.0</version>
+  <vendor email="flefebvre44@gmail.com">flefebvre</vendor>
+
+  <description><![CDATA[
+      Use the task manager with Rally (https://www.rallydev.com).
+    ]]></description>
+
+  <change-notes><![CDATA[
+      1.0 : Retrieve personnal tasks from your Rally account
+    ]]>
+  </change-notes>
+
+  <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="131"/>
+
+  <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products -->
+  <depends>com.intellij.modules.lang</depends>
+  <depends>com.intellij.tasks</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <tasks.repositoryType implementation="com.flefebv.rally.jetbrains.tasks.RallyRepositoryType"/>
+  </extensions>
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+</idea-plugin>
